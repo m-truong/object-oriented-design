@@ -48,8 +48,17 @@ app.post('/disk/:key', (req, res) => {
 
 // this endpoint is a READ disk endpoint
 app.get('/disk/:key', (req, res) => {
-
+    // this is the same destination file, but notice that it's not stored at the top-level, but kept within scope of my JS block
     const destinationFile = `${DATA_DIR}/${req.params.key}`;
+
+    try {
+        const data = fs.readFileSync(destinationFile);
+        res.send(data);
+    } catch (e) {
+        res.send('null');
+    }
+
+    // TODO: add more ntoes breaking down this entire code file
 })
 
 app.listen(1991, () => {
