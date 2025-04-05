@@ -51,6 +51,7 @@ app.get('/disk/:key', (req, res) => {
     // this is the same destination file, but notice that it's not stored at the top-level, but kept within scope of my JS block
     const destinationFile = `${DATA_DIR}/${req.params.key}`;
 
+    // notices that I have a try-catch block when trying to QUERY the data from DISK
     try {
         const data = fs.readFileSync(destinationFile);
         res.send(data);
