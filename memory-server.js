@@ -1,3 +1,5 @@
+// TODO: add more notes breaking down this entire code file
+
 // all required imports for npm packages go up here
 const express = require('express');
 // fs is a built-in FileSystem module Node.js file-system reader
@@ -50,7 +52,6 @@ app.post('/disk/:key', (req, res) => {
 app.get('/disk/:key', (req, res) => {
     // this is the same destination file, but notice that it's not stored at the top-level, but kept within scope of my JS block
     const destinationFile = `${DATA_DIR}/${req.params.key}`;
-
     // notices that I have a try-catch block when trying to QUERY the data from DISK
     try {
         const data = fs.readFileSync(destinationFile);
@@ -58,8 +59,6 @@ app.get('/disk/:key', (req, res) => {
     } catch (e) {
         res.send('null');
     }
-
-    // TODO: add more ntoes breaking down this entire code file
 })
 
 app.listen(1991, () => {
