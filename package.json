@@ -1,0 +1,22 @@
+{
+  "name": "object-oriented-design",
+  "version": "1.0.0",
+  "description": "This project focuses on designing a library management system using object-oriented principles in JavaScript. The goal is to create a hypothetical application that efficiently handles common library operations.",
+  "main": "memory-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-truong/object-oriented-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-truong/object-oriented-design/issues"
+  },
+  "homepage": "https://github.com/m-truong/object-oriented-design#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
